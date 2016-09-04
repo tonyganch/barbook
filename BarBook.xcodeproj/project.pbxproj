@@ -8,11 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		36BF03EF1D7B878E0004DAD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BF03EE1D7B878E0004DAD3 /* AppDelegate.swift */; };
-		36BF03F11D7B878E0004DAD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BF03F01D7B878E0004DAD3 /* ViewController.swift */; };
+		36BF03F11D7B878E0004DAD3 /* CocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BF03F01D7B878E0004DAD3 /* CocktailViewController.swift */; };
 		36BF03F41D7B878E0004DAD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36BF03F21D7B878E0004DAD3 /* Main.storyboard */; };
 		36BF03F61D7B878E0004DAD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36BF03F51D7B878E0004DAD3 /* Assets.xcassets */; };
 		36BF03F91D7B878E0004DAD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36BF03F71D7B878E0004DAD3 /* LaunchScreen.storyboard */; };
 		36BF04041D7B878F0004DAD3 /* BarBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BF04031D7B878F0004DAD3 /* BarBookTests.swift */; };
+		36BF040F1D7B8E940004DAD3 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BF040E1D7B8E940004DAD3 /* Cocktail.swift */; };
+		36BF04101D7B8E940004DAD3 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BF040E1D7B8E940004DAD3 /* Cocktail.swift */; };
+		36BF04121D7C213A0004DAD3 /* CocktailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BF04111D7C213A0004DAD3 /* CocktailTableViewCell.swift */; };
+		36BF04131D7C213A0004DAD3 /* CocktailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BF04111D7C213A0004DAD3 /* CocktailTableViewCell.swift */; };
+		36BF04151D7C24260004DAD3 /* CocktailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BF04141D7C24260004DAD3 /* CocktailTableViewController.swift */; };
+		36BF04161D7C24260004DAD3 /* CocktailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BF04141D7C24260004DAD3 /* CocktailTableViewController.swift */; };
+		36DC48041D7CBA2C0039316C /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC48021D7CBA2C0039316C /* Realm.framework */; };
+		36DC48051D7CBA2C0039316C /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC48021D7CBA2C0039316C /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36DC48061D7CBA2C0039316C /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC48031D7CBA2C0039316C /* RealmSwift.framework */; };
+		36DC48071D7CBA2C0039316C /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC48031D7CBA2C0039316C /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,10 +35,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		36DC48081D7CBA2C0039316C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				36DC48071D7CBA2C0039316C /* RealmSwift.framework in Embed Frameworks */,
+				36DC48051D7CBA2C0039316C /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		36BF03EB1D7B878E0004DAD3 /* BarBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BF03EE1D7B878E0004DAD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		36BF03F01D7B878E0004DAD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		36BF03F01D7B878E0004DAD3 /* CocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailViewController.swift; sourceTree = "<group>"; };
 		36BF03F31D7B878E0004DAD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36BF03F51D7B878E0004DAD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36BF03F81D7B878E0004DAD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +61,11 @@
 		36BF03FF1D7B878F0004DAD3 /* BarBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BF04031D7B878F0004DAD3 /* BarBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarBookTests.swift; sourceTree = "<group>"; };
 		36BF04051D7B878F0004DAD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36BF040E1D7B8E940004DAD3 /* Cocktail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		36BF04111D7C213A0004DAD3 /* CocktailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailTableViewCell.swift; sourceTree = "<group>"; };
+		36BF04141D7C24260004DAD3 /* CocktailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailTableViewController.swift; sourceTree = "<group>"; };
+		36DC48021D7CBA2C0039316C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		36DC48031D7CBA2C0039316C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36DC48061D7CBA2C0039316C /* RealmSwift.framework in Frameworks */,
+				36DC48041D7CBA2C0039316C /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +91,8 @@
 		36BF03E21D7B878E0004DAD3 = {
 			isa = PBXGroup;
 			children = (
+				36DC48021D7CBA2C0039316C /* Realm.framework */,
+				36DC48031D7CBA2C0039316C /* RealmSwift.framework */,
 				36BF03ED1D7B878E0004DAD3 /* BarBook */,
 				36BF04021D7B878F0004DAD3 /* BarBookTests */,
 				36BF03EC1D7B878E0004DAD3 /* Products */,
@@ -78,8 +112,11 @@
 			isa = PBXGroup;
 			children = (
 				36BF03EE1D7B878E0004DAD3 /* AppDelegate.swift */,
-				36BF03F01D7B878E0004DAD3 /* ViewController.swift */,
+				36BF03F01D7B878E0004DAD3 /* CocktailViewController.swift */,
 				36BF03F21D7B878E0004DAD3 /* Main.storyboard */,
+				36BF04141D7C24260004DAD3 /* CocktailTableViewController.swift */,
+				36BF04111D7C213A0004DAD3 /* CocktailTableViewCell.swift */,
+				36BF040E1D7B8E940004DAD3 /* Cocktail.swift */,
 				36BF03F51D7B878E0004DAD3 /* Assets.xcassets */,
 				36BF03F71D7B878E0004DAD3 /* LaunchScreen.storyboard */,
 				36BF03FA1D7B878E0004DAD3 /* Info.plist */,
@@ -106,6 +143,7 @@
 				36BF03E71D7B878E0004DAD3 /* Sources */,
 				36BF03E81D7B878E0004DAD3 /* Frameworks */,
 				36BF03E91D7B878E0004DAD3 /* Resources */,
+				36DC48081D7CBA2C0039316C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,6 +184,7 @@
 				TargetAttributes = {
 					36BF03EA1D7B878E0004DAD3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = YVS98596N5;
 					};
 					36BF03FE1D7B878F0004DAD3 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -197,8 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36BF03F11D7B878E0004DAD3 /* ViewController.swift in Sources */,
+				36BF04151D7C24260004DAD3 /* CocktailTableViewController.swift in Sources */,
+				36BF03F11D7B878E0004DAD3 /* CocktailViewController.swift in Sources */,
 				36BF03EF1D7B878E0004DAD3 /* AppDelegate.swift in Sources */,
+				36BF040F1D7B8E940004DAD3 /* Cocktail.swift in Sources */,
+				36BF04121D7C213A0004DAD3 /* CocktailTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36BF04131D7C213A0004DAD3 /* CocktailTableViewCell.swift in Sources */,
 				36BF04041D7B878F0004DAD3 /* BarBookTests.swift in Sources */,
+				36BF04101D7B8E940004DAD3 /* Cocktail.swift in Sources */,
+				36BF04161D7C24260004DAD3 /* CocktailTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,10 +374,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BarBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.BarBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -340,10 +392,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BarBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.BarBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -390,6 +449,7 @@
 				36BF040A1D7B878F0004DAD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36BF040B1D7B878F0004DAD3 /* Build configuration list for PBXNativeTarget "BarBookTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +458,7 @@
 				36BF040D1D7B878F0004DAD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreSpotlight
+import MobileCoreServices
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -42,5 +45,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    
+    // Mark: Indexing
+    
+    func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: [AnyObject]? -> Void) -> Bool {
+        if userActivity.activityType == CSSearchableItemActionType {
+            // This activity represents an item indexed using Core Spotlight, so restore the context related to the unique identifier.
+            // Note that the unique identifier of the Core Spotlight item is set in the activity’s userInfo property for the key CSSearchableItemActivityIdentifier.
+            return handleIndexedSearch(userActivity)
+        }
+        return true
+    }
+    
+    func handleIndexedSearch (userActivity: NSUserActivity) -> Bool {
+        if  let name = userActivity.userInfo?["kCSSearchableItemActivityIdentifier"] as? String {
+            let navigationController = window?.rootViewController as? UINavigationController
+            let cocktailTVC = navigationController!.viewControllers.first as! CocktailTableViewController
+            guard let cocktail = cocktailTVC.cocktailForId(name) else {return false}
+            let cocktailVC = navigationController!.storyboard?.instantiateViewControllerWithIdentifier("CocktailCard") as? CocktailViewController
+            cocktailVC?.cocktail = cocktail
+            navigationController?.pushViewController(cocktailVC!, animated: false)
+            return true
+        }
+        return false
+    }
 }
 
