@@ -1,0 +1,28 @@
+{
+  "cocktails": [
+    {
+      "name": "Aviation",
+      "notes": "4.5 cl gin\n1.5 cl maraschino\n1.5 cl lemon juice\n1 dash of creme de violette",
+      "totalVolume": "75 ml",
+      "alcoholVolume": "23 ml",
+      "alcoholPercentage": "31%",
+      "source": []
+    },
+    {
+      "name": "Bijou",
+      "notes": "",
+      "totalVolume": "",
+      "alcoholVolume": "",
+      "alcoholPercentage": "",
+      "source": []
+    },
+    {
+      "name": "",
+      "notes": "",
+      "totalVolume": "",
+      "alcoholVolume": "",
+      "alcoholPercentage": "",
+      "source": []
+    }
+  ]
+}

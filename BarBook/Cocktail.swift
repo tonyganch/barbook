@@ -10,57 +10,49 @@ import UIKit
 import CoreSpotlight
 import MobileCoreServices
 
-class Cocktail: NSObject, NSCoding {
+class Cocktail {
     // MARK: Properties
+    var name: String // Aviation
+    var notes: String? // 4.5 cl gin
+    var totalVolume: String? // 75 ml
+    var alcoholVolume: String? // 10 ml
+    var alcoholPercentage: String? // 5%
     
-    var name: String
-    var notes: String?
-    var image: UIImage?
-    
-    // MARK: Types
-    
-    struct PropertyKey {
-        static let nameKey = "name"
-        static let notesKey = "notes"
-        static let imageKey = "image"
-    }
-    
-    // MARK: Archiving Paths
-    
-    static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("cocktails")
-    
-    // MARK: Initialization
-    
-    init?(name: String, notes: String?, image: UIImage?) {
-        self.name = name
-        self.notes = notes
-        self.image = image
-        
-        super.init()
-        
+    init?(name: String, notes: String?="", totalVolume: String?="", alcoholVolume: String?="", alcoholPercentage: String?="") {
+        // Initialization should fail if there is no name or if the rating is negative.
         if name.isEmpty {
             return nil
         }
+        
+        // Initialize stored properties.
+        self.name = name
+        self.notes = notes
+        self.totalVolume = totalVolume
+        self.alcoholVolume = alcoholVolume
+        self.alcoholPercentage = alcoholPercentage
     }
     
-    // MARK: NSCoding
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(name, forKey: PropertyKey.nameKey)
-        aCoder.encodeObject(notes, forKey: PropertyKey.notesKey)
-        aCoder.encodeObject(image, forKey: PropertyKey.imageKey)
+    init?(data: NSDictionary!) {
+        let name = data.objectForKey("name") as! String
+        
+        // Initialization should fail if there is no name or if the rating is negative.
+        if name.isEmpty {
+            return nil
+        }
+        
+        // Initialize stored properties.
+        self.name = name
+        self.notes = data.objectForKey("notes") as? String
+        self.totalVolume = data.objectForKey("totalVolume") as? String
+        self.alcoholVolume = data.objectForKey("alcoholVolume") as? String
+        self.alcoholPercentage = data.objectForKey("alcoholPercentage") as? String
     }
-    
-    required convenience init?(coder aDecoder: NSCoder) {
-        let name = aDecoder.decodeObjectForKey(PropertyKey.nameKey) as! String
-        let notes = aDecoder.decodeObjectForKey(PropertyKey.notesKey) as? String
-        let image = aDecoder.decodeObjectForKey(PropertyKey.imageKey) as? UIImage
-        self.init(name: name, notes: notes, image: image)
-    }
+
     
     // MARK: Search
     
+    /*
     var attributeSet: CSSearchableItemAttributeSet {
         let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
         attributeSet.title = name
@@ -78,4 +70,5 @@ class Cocktail: NSObject, NSCoding {
                                     attributeSet: attributeSet)
         return item
     }
+    */
 }

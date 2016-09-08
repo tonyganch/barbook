@@ -9,6 +9,7 @@
 import UIKit
 import CoreSpotlight
 import MobileCoreServices
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
         return true
     }
 
@@ -47,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     // Mark: Indexing
-    
+    /*
     func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: [AnyObject]? -> Void) -> Bool {
         if userActivity.activityType == CSSearchableItemActionType {
             // This activity represents an item indexed using Core Spotlight, so restore the context related to the unique identifier.
@@ -69,5 +71,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return false
     }
+ */
 }
 

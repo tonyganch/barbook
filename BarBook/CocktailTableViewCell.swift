@@ -13,8 +13,9 @@ class CocktailTableViewCell: UITableViewCell {
     // MARK: Properties
 
     @IBOutlet weak var nameField: UILabel!
-    @IBOutlet weak var imageField: UIImageView!
     @IBOutlet weak var notesField: UITextView!
+    @IBOutlet weak var volumeField: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
