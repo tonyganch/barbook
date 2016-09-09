@@ -30,7 +30,7 @@ class CocktailViewController: UIViewController, UITextViewDelegate, UINavigation
         // Set up views if editing an existing Meal.
         if let cocktail = cocktail {
             navigationItem.title = cocktail.name
-            notesTextField.text = cocktail.notes
+            notesTextField.text = cocktail.description
         }
     }
 

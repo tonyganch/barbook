@@ -9,24 +9,21 @@
 import UIKit
 import CoreSpotlight
 import MobileCoreServices
-import Realm
-import RealmSwift
 
 
-func getData() -> Array<Cocktail>! {
-    let path = NSBundle.mainBundle().pathForResource("BarBookData", ofType: "json")
+func getCocktails() -> Array<Cocktail>! {
+    let path = NSBundle.mainBundle().pathForResource("cocktails", ofType: "json")
     let jsonData = try! NSData(contentsOfFile: path!, options: NSDataReadingOptions.DataReadingMappedIfSafe)
-    let jsonResult: NSDictionary = try! NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-    let loadedCocktails : [NSDictionary] = (jsonResult["cocktails"] as? [NSDictionary])!
+    let loadedCocktails: NSArray = try! NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers) as! NSArray
     return loadedCocktails.map({
-        Cocktail(data: $0)!
+        Cocktail(data: $0 as! NSDictionary)!
     })
 }
 
 class CocktailTableViewController: UITableViewController {
     // MARK: Properties
     
-    let cocktails = getData()
+    let cocktails = getCocktails()
 
 
     override func viewDidLoad() {
@@ -47,10 +44,10 @@ class CocktailTableViewController: UITableViewController {
         }
     }
     
-    func cocktailForId(id: String) -> Cocktail? {
-        let cocktail = cocktails.filter() {$0.id == id}.first
-        return cocktail
+    func getCocktailById(id: String) -> Cocktail? {
+        return cocktails.filter() {$0.id == id}.first
     }
+    
 
     // MARK: Table view data source
 
@@ -71,12 +68,8 @@ class CocktailTableViewController: UITableViewController {
         let cocktail = cocktails[indexPath.row] 
         
         cell.nameField.text = cocktail.name
-        
-        cell.notesField.text = cocktail.notes
-        
-        if cocktail.totalVolume != nil && cocktail.alcoholVolume != nil {
-            cell.volumeField.text = "\(cocktail.totalVolume ?? "")/\(cocktail.alcoholVolume ?? "")"
-        }
+        cell.notesField.text = cocktail.description
+        cell.volumeField.text = "\(cocktail.totalVolume)/\(cocktail.alcoholVolume)"
         
         return cell
     }

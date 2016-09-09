@@ -9,7 +9,6 @@
 import UIKit
 import CoreSpotlight
 import MobileCoreServices
-import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -49,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     // Mark: Indexing
-    /*
+    
     func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: [AnyObject]? -> Void) -> Bool {
         if userActivity.activityType == CSSearchableItemActionType {
             // This activity represents an item indexed using Core Spotlight, so restore the context related to the unique identifier.
@@ -63,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if  let name = userActivity.userInfo?["kCSSearchableItemActivityIdentifier"] as? String {
             let navigationController = window?.rootViewController as? UINavigationController
             let cocktailTVC = navigationController!.viewControllers.first as! CocktailTableViewController
-            guard let cocktail = cocktailTVC.cocktailForId(name) else {return false}
+            guard let cocktail = cocktailTVC.getCocktailById(name) else {return false}
             let cocktailVC = navigationController!.storyboard?.instantiateViewControllerWithIdentifier("CocktailCard") as? CocktailViewController
             cocktailVC?.cocktail = cocktail
             navigationController?.pushViewController(cocktailVC!, animated: false)
@@ -71,6 +70,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return false
     }
- */
+ 
 }
 

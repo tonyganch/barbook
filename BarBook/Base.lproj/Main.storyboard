@@ -10,7 +10,7 @@
         <!--All cocktails-->
         <scene sceneID="kUd-OW-VUO">
             <objects>
-                <tableViewController id="UBe-Q5-qUh" customClass="CocktailTableViewController" customModule="BarBook" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CocktailTableViewController" id="UBe-Q5-qUh" customClass="CocktailTableViewController" customModule="BarBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="G5w-eP-LkA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
