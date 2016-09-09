@@ -31,11 +31,13 @@ class CocktailTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        indexAllCocktails()
     }
  
     
     // MARK: Indexing
-    /*
+    
     func indexAllCocktails() {
         let searchableItems = cocktails.map { $0.searchableItem }
         CSSearchableIndex.defaultSearchableIndex().indexSearchableItems(searchableItems) { error in
@@ -46,12 +48,11 @@ class CocktailTableViewController: UITableViewController {
     }
     
     func cocktailForId(id: String) -> Cocktail? {
-        let cocktail = cocktails.filter() {$0.name == id}.first
+        let cocktail = cocktails.filter() {$0.id == id}.first
         return cocktail
     }
-    */
 
-    // MARK: - Table view data source
+    // MARK: Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -67,13 +68,11 @@ class CocktailTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)  as! CocktailTableViewCell
         
-        let cocktail = cocktails[indexPath.row] as! Cocktail
+        let cocktail = cocktails[indexPath.row] 
         
         cell.nameField.text = cocktail.name
         
-        if let notes = cocktail.notes {
-            cell.notesField.text = notes
-        }
+        cell.notesField.text = cocktail.notes
         
         if cocktail.totalVolume != nil && cocktail.alcoholVolume != nil {
             cell.volumeField.text = "\(cocktail.totalVolume ?? "")/\(cocktail.alcoholVolume ?? "")"

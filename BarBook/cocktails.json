@@ -1,0 +1,65 @@
+[
+  {
+    "id": "aviation",
+    "name": "Aviation",
+    "ingridients": [
+      ["gin", 45],
+      ["maraschino", 15],
+      ["lemon juice", 15],
+      ["creme de violette", "1 dash"]
+    ],
+    "lists": [""],
+    "keywords": ["aviation", "gin", "maraschino", "creme de violette"]
+  },
+  {
+    "id": "bijou",
+    "name": "Bijou",
+    "ingridients": [
+      ["gin", 45],
+      ["sweet vermouth", 15],
+      ["green chartreuse", 15],
+      ["orange bitter", "1 dash"]
+      ["lemon peel"]
+    ],
+    "lists": ["Dale DeGroff"],
+    "keywords": ["bijou", "gin", "sweet vermouth", "green chartreuse", "orange bitter"]
+  },
+  {
+    "id": "bijou-dead-rabbit",
+    "name": "Bijou",
+    "ingridients": [
+      ["gin", 45],
+      ["sweet vermouth", 45],
+      ["green chartreuse", 15],
+      ["orange bitter", "2 dashes"],
+      ["Angostura", "2 dashes"],
+      ["Pernod Absinthe", "2 dashes"],
+      ["orange peel"]
+    ],
+    "lists": ["The Dead Rabbit Drinks Manual"],
+    "keywords": ["bijou", "gin", "sweet vermouth", "green chartreuse", "orange bitter", "angostura"]
+  },
+  {
+    "id": "tailspin",
+    "name": "The Tailspin",
+    "ingridients": [
+      ["Campari rinse"],
+      ["gin", 45],
+      ["sweet vermouth", 30],
+      ["green chartreuse", 30],
+      ["orange bitter", "1 dash"],
+      ["lemon twist"]
+    ],
+    "lists": ["Death and Co."],
+    "keywords": ["bijou", "tailspin", "gin", "sweet vermouth", "green chartreuse", "orange bitter", "campari"]
+  },
+  {
+    "id": "",
+    "name": "",
+    "ingridients": [
+      [""]
+    ],
+    "lists": [""],
+    "keywords": [""]
+  }
+]
