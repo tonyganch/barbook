@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarBook/AppDelegate.swift"
-            timestampString = "495023765.82237"
+            timestampString = "495117396.861671"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "AppDelegate"
-            landmarkType = "3">
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "handleIndexedSearch(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarBook/CocktailTableViewController.swift"
-            timestampString = "495068124.197401"
+            timestampString = "495244533.028121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "indexAllCocktails()"
             landmarkType = "5">
             <Locations>
                <Location
@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarBook/AppDelegate.swift"
-            timestampString = "495023765.82237"
+            timestampString = "495117396.861671"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -120,13 +120,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarBook/AppDelegate.swift"
-            timestampString = "495023765.82237"
+            timestampString = "495117396.861671"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarBook/CocktailTableViewController.swift"
+            timestampString = "495243784.702451"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "getCocktails()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

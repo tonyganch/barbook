@@ -13,7 +13,7 @@ class CocktailTableViewCell: UITableViewCell {
     // MARK: Properties
 
     @IBOutlet weak var nameField: UILabel!
-    @IBOutlet weak var notesField: UITextView!
+    @IBOutlet weak var notesField: UILabel!
     @IBOutlet weak var volumeField: UILabel!
     
     

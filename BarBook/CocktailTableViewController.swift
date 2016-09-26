@@ -6,6 +6,7 @@
 //  Copyright © 2016 Tony Ganch. All rights reserved.
 //
 
+
 import UIKit
 import CoreSpotlight
 import MobileCoreServices
@@ -20,16 +21,32 @@ func getCocktails() -> Array<Cocktail>! {
     })
 }
 
-class CocktailTableViewController: UITableViewController {
+class CocktailTableViewController: UITableViewController, UISearchResultsUpdating {
     // MARK: Properties
     
     let cocktails = getCocktails()
-
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    var filteredTableData = [Cocktail]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // delegate and data source
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        // Along with auto layout, these are the keys for enabling variable cell height
+        tableView.estimatedRowHeight = 120.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         indexAllCocktails()
+        
+        searchController.searchResultsUpdater = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.sizeToFit()
+        self.tableView.tableHeaderView = searchController.searchBar
     }
  
     
@@ -48,6 +65,33 @@ class CocktailTableViewController: UITableViewController {
         return cocktails.filter() {$0.id == id}.first
     }
     
+    // MARK: Search
+    
+    func filterContentForSearchText(searchText: String) {
+        if searchText.isEmpty {
+            self.filteredTableData = self.cocktails
+        } else {
+            let searchQuery = searchText.lowercaseString.componentsSeparatedByString(" ")
+            
+            self.filteredTableData = self.cocktails!.filter({( cocktail: Cocktail) -> Bool in
+                let keywords = cocktail.keywords.joinWithSeparator(" ").lowercaseString
+                for query in searchQuery {
+                    if keywords.rangeOfString(query) == nil {
+                        return false
+                    }
+                }
+                return true
+            })
+        }
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController)
+    {
+        let searchString = searchController.searchBar.text
+        filterContentForSearchText(searchString!)
+        self.tableView.reloadData()
+    }
+    
 
     // MARK: Table view data source
 
@@ -56,7 +100,12 @@ class CocktailTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Int(cocktails.count)
+        if (self.searchController.active) {
+            return self.filteredTableData.count
+        }
+        else {
+            return cocktails.count
+        }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -65,7 +114,12 @@ class CocktailTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)  as! CocktailTableViewCell
         
-        let cocktail = cocktails[indexPath.row] 
+        var cocktail: Cocktail!
+        if (self.searchController.active) {
+            cocktail = filteredTableData[indexPath.row]
+        } else {
+            cocktail = cocktails[indexPath.row]
+        }
         
         cell.nameField.text = cocktail.name
         cell.notesField.text = cocktail.description

@@ -19,14 +19,9 @@
 		36BF04131D7C213A0004DAD3 /* CocktailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BF04111D7C213A0004DAD3 /* CocktailTableViewCell.swift */; };
 		36BF04151D7C24260004DAD3 /* CocktailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BF04141D7C24260004DAD3 /* CocktailTableViewController.swift */; };
 		36BF04161D7C24260004DAD3 /* CocktailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BF04141D7C24260004DAD3 /* CocktailTableViewController.swift */; };
-		36DC48041D7CBA2C0039316C /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC48021D7CBA2C0039316C /* Realm.framework */; };
-		36DC48051D7CBA2C0039316C /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC48021D7CBA2C0039316C /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		36DC48061D7CBA2C0039316C /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC48031D7CBA2C0039316C /* RealmSwift.framework */; };
-		36DC48071D7CBA2C0039316C /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC48031D7CBA2C0039316C /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36DC48131D82C0C20039316C /* Spirit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC48121D82C0C20039316C /* Spirit.swift */; };
 		36DC48141D82C0C20039316C /* Spirit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC48121D82C0C20039316C /* Spirit.swift */; };
-		36DC48171D82C2390039316C /* cocktails.json in Resources */ = {isa = PBXBuildFile; fileRef = 36DC48151D82C2390039316C /* cocktails.json */; };
-		36DC48181D82C2390039316C /* spirits.json in Resources */ = {isa = PBXBuildFile; fileRef = 36DC48161D82C2390039316C /* spirits.json */; };
+		36DC481E1D82E5790039316C /* cocktails.json in Resources */ = {isa = PBXBuildFile; fileRef = 36DC481D1D82E5790039316C /* cocktails.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +41,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				36DC48071D7CBA2C0039316C /* RealmSwift.framework in Embed Frameworks */,
-				36DC48051D7CBA2C0039316C /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,13 +61,8 @@
 		36BF040E1D7B8E940004DAD3 /* Cocktail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
 		36BF04111D7C213A0004DAD3 /* CocktailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailTableViewCell.swift; sourceTree = "<group>"; };
 		36BF04141D7C24260004DAD3 /* CocktailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailTableViewController.swift; sourceTree = "<group>"; };
-		36DC48021D7CBA2C0039316C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		36DC48031D7CBA2C0039316C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
-		36DC48091D7CD1820039316C /* BarBook.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = BarBook.realm; sourceTree = "<group>"; };
-		36DC480D1D8181E10039316C /* BarBookData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BarBookData.json; sourceTree = "<group>"; };
 		36DC48121D82C0C20039316C /* Spirit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spirit.swift; sourceTree = "<group>"; };
-		36DC48151D82C2390039316C /* cocktails.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cocktails.json; sourceTree = "<group>"; };
-		36DC48161D82C2390039316C /* spirits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = spirits.json; sourceTree = "<group>"; };
+		36DC481D1D82E5790039316C /* cocktails.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cocktails.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36DC48061D7CBA2C0039316C /* RealmSwift.framework in Frameworks */,
-				36DC48041D7CBA2C0039316C /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +86,6 @@
 		36BF03E21D7B878E0004DAD3 = {
 			isa = PBXGroup;
 			children = (
-				36DC48021D7CBA2C0039316C /* Realm.framework */,
-				36DC48031D7CBA2C0039316C /* RealmSwift.framework */,
 				36BF03ED1D7B878E0004DAD3 /* BarBook */,
 				36BF04021D7B878F0004DAD3 /* BarBookTests */,
 				36BF03EC1D7B878E0004DAD3 /* Products */,
@@ -120,11 +104,8 @@
 		36BF03ED1D7B878E0004DAD3 /* BarBook */ = {
 			isa = PBXGroup;
 			children = (
-				36DC48151D82C2390039316C /* cocktails.json */,
-				36DC48161D82C2390039316C /* spirits.json */,
+				36DC481D1D82E5790039316C /* cocktails.json */,
 				36BF03EE1D7B878E0004DAD3 /* AppDelegate.swift */,
-				36DC480D1D8181E10039316C /* BarBookData.json */,
-				36DC48091D7CD1820039316C /* BarBook.realm */,
 				36BF03F01D7B878E0004DAD3 /* CocktailViewController.swift */,
 				36BF03F21D7B878E0004DAD3 /* Main.storyboard */,
 				36BF04141D7C24260004DAD3 /* CocktailTableViewController.swift */,
@@ -230,8 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36DC48171D82C2390039316C /* cocktails.json in Resources */,
-				36DC48181D82C2390039316C /* spirits.json in Resources */,
+				36DC481E1D82E5790039316C /* cocktails.json in Resources */,
 				36BF03F91D7B878E0004DAD3 /* LaunchScreen.storyboard in Resources */,
 				36BF03F61D7B878E0004DAD3 /* Assets.xcassets in Resources */,
 				36BF03F41D7B878E0004DAD3 /* Main.storyboard in Resources */,

@@ -8,12 +8,14 @@
 
 import UIKit
 
-class CocktailViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate {
+class CocktailViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UINavigationControllerDelegate {
     
     // MARK: Properties
 
-    @IBOutlet weak var notesTextField: UITextView!
-    @IBOutlet weak var imageView: UIImageView!
+
+    @IBOutlet weak var totalVolumeTextField: UITextField!
+    @IBOutlet weak var alcoholVolumeTextField: UITextField!
+    @IBOutlet weak var ingredientsTextField: UITextView!
     
     
     /*
@@ -25,12 +27,16 @@ class CocktailViewController: UIViewController, UITextViewDelegate, UINavigation
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        notesTextField.delegate = self
+        totalVolumeTextField.delegate = self
+        alcoholVolumeTextField.delegate = self
+        ingredientsTextField.delegate = self
         
         // Set up views if editing an existing Meal.
         if let cocktail = cocktail {
             navigationItem.title = cocktail.name
-            notesTextField.text = cocktail.description
+            totalVolumeTextField.text = cocktail.totalVolume
+            alcoholVolumeTextField.text = cocktail.alcoholVolume
+            ingredientsTextField.text = cocktail.description
         }
     }
 
